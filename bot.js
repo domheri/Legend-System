@@ -2404,7 +2404,7 @@ client.on('guildMemberAdd', member => {
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
      .setFooter(`${member.guild.name}`)
-        .setTimestamp()
+        .setTimestamp(.05)
    
       channel.sendEmbed(embed);
     });
