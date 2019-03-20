@@ -2362,44 +2362,7 @@ var prefix = "=";
               });
     }
 
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | اطلق من دخل شخص جديد' , `اهلاً بك في السيرفر, ${member}`)
-        .addField(':		id: | user :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter(`${member.guild.name}`)
-        .setTimestamp(.05)
-   
-      channel.sendEmbed(embed);
-    });
-    
-    client.on('guildMemberRemove', member => {
-        var embed = new Discord.RichEmbed()
-        .setAuthor(member.user.username, member.user.avatarURL)
-        .setThumbnail(member.user.avatarURL)
-        .setTitle(`لقد خرج صديق :( :raised_hand::skin-tone-1: :pensive:`)
-        .setDescription(`مع السلامة يحبي :raised_hand::skin-tone-1: :pensive: `)
-        .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RED')
-        .setFooter(`====شكرا للاستمتاع====`, ' https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-    
-    var channel =member.guild.channels.find('name', 'welcome')
-    if (!channel) return;
-    channel.send({embed : embed});
-    })
-	      
-});
+ 
 client.on("message", msg => {
   if(msg.content === '=' + "id") {
       const embed = new Discord.RichEmbed();
@@ -2488,7 +2451,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  *https://discord.gg/zFTCnQ")
+  .addField(" ** :gear: Server Support :gear: **" , "  *https://discord.gg/SgGqrW")
      
      
   message.channel.sendEmbed(embed);
@@ -3222,42 +3185,7 @@ client.on("message", (message) => {
  
 });
 
-client.on('guildMemberAdd', member => {
-let channel = member.guild.channels.find(c => c.name === 'welcomee');
-let memberavatar = member.user.avatarURL
-  if (!channel) return; 
-let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setThumbnail(memberavatar)
-    .addField('🎽 | الاسم :  ',`${member}`)
-    .addField('📢 | انضم:' , `انضم عندنا عضو جديد , ${member}:grinning:  `)
-    .addField('🆔 | الايدي :', "**[" + `${member.id}` + "]**" )
-            .addField('➡| اصبحوا',`${member.guild.memberCount}`)
-           
-              .addField("الاسم:",`<@` + `${member.id}` + `>`, true)
-                
-                                 .addField('شكرا لدخولك سيرفر', `${member.guild.name}`,true)
-                                   
- .setFooter("LegendSystem")
-    .setTimestamp()
-
-  channel.sendEmbed(embed);
-});
-        
-        client.on('guildMemberRemove', member => {
-            var embed = new Discord.RichEmbed()
-            .setAuthor(member.user.username, member.user.avatarURL)
-            .setThumbnail(member.user.avatarURL)
-            .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
-            .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
-            .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-            .setColor('RED')
-            .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-        
-        var channel =member.guild.channels.find('name', 'welcomee')
-        if (!channel) return;
-        channel.send({embed : embed});
-        })
+    
 
 const lol = JSON.parse(fs.readFileSync("lol.json", "utf8"))
 function hi (message, args){
